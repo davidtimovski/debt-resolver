@@ -1,0 +1,277 @@
+$primary-text-color: #545454;
+$light-text-color: #848484;
+$orange-color: #f04242;
+$blue-color: #c2ebef;
+$transparent-blue-color: rgba(194, 235, 239, 0.5);
+$font-size: 44px;
+$line-height: 58px;
+$paragraph-font-size: 28px;
+$border-color: #999;
+
+
+body {
+    background: url('../images/background-tile.jpg') repeat;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $primary-text-color;
+}
+
+.column {
+    display: inline-block;
+    width: 5%;
+}
+
+.container {
+    display: inline-block;
+    width: 90%;
+    margin: 70px 0;
+}
+
+h1 {
+    padding: 20px 0 60px;
+    font-size: 64px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: $paragraph-font-size;
+    line-height: $line-height;
+}
+
+hr {
+    height: 1px;
+    background-color: $border-color;
+    margin: 25px 5px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.highlight {
+    color: $orange-color;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    background: $orange-color;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 20px 0 18px;
+    margin-bottom: 25px;
+    font-family: inherit;
+    font-size: $font-size;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 100ms ease-in-out;
+}
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.button:active {
+    background: #e03232;
+}
+a.button {
+    padding: 18px 0 16px;
+}
+.button.dark {
+    background: $primary-text-color;
+}
+.button.dark:active {
+    background: #444;
+}
+
+.inline-button {
+    background: $orange-color;
+    border: none;
+    border-radius: 38px;
+    outline: none;
+    padding: 12px 24px;
+    margin-left: 15px;
+    vertical-align: top;
+    font-family: inherit;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 100ms ease-in-out;
+}
+.inline-button:active {
+    background: #e03232;
+}
+
+.content {
+    background: $transparent-blue-color;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+form {
+    font-size: 0;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid $border-color;
+        outline: none;
+        border-radius: 15px;
+        padding: 18px 136px 15px 20px;
+        margin-bottom: 25px;
+        font-family: inherit;
+        font-size: $font-size;
+        color: inherit;
+        transition: background 200ms ease-in-out;
+    }
+
+    .person-input-group {
+        position: relative;
+
+        input {
+            margin-bottom: 0;
+        }
+
+        .cancel-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 19px 20px 17px;
+            font-family: inherit;
+            font-size: $font-size;
+            color: inherit;
+            cursor: pointer;
+        }
+    }
+}
+form.error {
+    input {
+        background: #ffdddd;
+    }
+}
+
+.transactions-list {
+    padding: 25px 0 25px 65px;
+    list-style-type: decimal;
+    background: $transparent-blue-color;
+    border-radius: 15px;
+
+    li {
+        line-height: $line-height + 12;
+    }
+}
+
+ul {
+    list-style-type: none;
+
+    li {
+        margin-bottom: 15px;
+    }
+}
+
+.persons-list {
+    margin-bottom: 15px;
+
+    li {
+        position: relative;
+        background: $blue-color;
+        border-radius: 15px;
+        padding: 21px 20px 19px;
+        font-size: $font-size;
+        cursor: pointer;
+
+        .grouped-text {
+            display: inline-block;
+            padding-right: 150px;
+        }
+
+        .remove-button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 16px 20px 14px;
+            font-family: inherit;
+            font-size: inherit;
+            color: $light-text-color;
+            cursor: pointer;
+        }
+
+        .pull-label {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 24px 20px 20px;
+            font-family: inherit;
+            font-size: inherit;
+            color: $light-text-color;
+        }
+    }
+
+    li.active {
+        background: #a2cbcf;
+        color: #fff;
+        transition: background 100ms ease-in-out, color 100ms ease-in-out;
+
+        .remove-button {
+            color: #fff;
+        }
+    }
+
+    li.ui-draggable-dragging {
+        background: rgba(162, 203, 207, 0.5);
+
+        .pull-label {
+            display: none;
+        }
+    }
+
+    li.ui-droppable-active {
+        background: rgba(192, 235, 239, 0.5);
+        text-align: right;
+
+        .grouped-text {
+            padding-right: 0;
+        }
+
+        .pull-label {
+            display: none;
+        }
+    }
+}
+
+.debt-list {
+    margin-top: 25px;
+    font-size: $font-size;
+}
+.debt-list.resolved {
+    padding: 25px 0 25px 65px;
+    margin-top: 15px;
+    list-style-type: disc;
+    background: $transparent-blue-color;
+    border-radius: 15px;
+
+    li {
+        margin-bottom: 0;
+        line-height: $line-height + 12;
+    }
+}

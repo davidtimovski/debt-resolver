@@ -1,0 +1,31 @@
+<template>
+    <div class="hide" ref="view">
+        <h1>Add Persons</h1>
+
+        <form class="${formErrorClass}">
+            <button click.delegate="save()" class="button">${addPersonLabel}</button>
+
+            <a route-href="route: add-debt" if.bind="canAddDebt" class="button dark">${addDebtLabel}</a>
+
+            <div class="person-input-group">
+                <input type="text" value.bind="data.currentPerson.name" ref="nameInput" />
+                <button click.delegate="cancel()" if.bind="canCancel" class="cancel-button">Cancel</button>
+            </div>
+        </form>
+
+        <div if.bind="canSeePersons">
+            <hr>
+
+            <ul class="persons-list">
+                <li repeat.for="person of data.persons" click.delegate="$parent.select(person)" class="${person === $parent.data.currentPerson ? 'active' : ''}">
+                    <span class="grouped-text">${person.name}</span>
+                    <button click.delegate="$parent.remove($index, person, $event)" class="remove-button">${person.removeButtonLabel}</button>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <a route-href="route: index" class="button">Back to Home</a>
+    </div>
+</template>

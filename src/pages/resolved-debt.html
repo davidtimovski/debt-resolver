@@ -1,0 +1,34 @@
+<template>
+    <div class="hide" ref="view">
+        <h1>Resolved</h1>
+
+        <ol class="transactions-list" if.bind="data.transactions.length > 0">
+            <li repeat.for="debt of data.transactions">
+                ${debt.debtor.name} &rightarrow; <span class="highlight">${debt.amount}</span> &rightarrow; ${debt.creditor.name}
+            </li>
+        </ol>
+        
+        <div if.bind="data.transactions.length === 0" class="content">
+            No transactions are necessary.
+        </div>
+
+        <hr>
+
+        <div>
+            Total transactions reduced by <span class="highlight">${data.reduction}%</span>
+        </div>
+
+        <hr>
+
+        <ul class="debt-list resolved">
+            <li repeat.for="debt of data.debtItems">
+                ${debt.debtor.name} owes ${debt.creditor.name} <span class="underline highlight">${debt.amount}</span>
+            </li>
+        </ul>
+
+        <hr>
+
+        <button click.trigger="startOverKeepPersons()" class="button">Start over (keep persons)</button>
+        <button click.trigger="startOver()" class="button dark">Start over</button>
+    </div>
+</template>

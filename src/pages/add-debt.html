@@ -1,0 +1,31 @@
+<template>
+    <div class="hide" ref="view">
+        <h1>Add Debt</h1>
+        
+        <a route-href="route: add-persons" class="button">Back to Add Persons</a>
+        <div if.bind="canResolveDebt">
+            <button click.trigger="resolveDebt()" class="button dark">Resolve Debt</button>
+        </div>
+
+        <hr>
+
+        <ul class="persons-list">
+            <li repeat.for="person of data.persons" data-person="${person.name}" class="draggable droppable">
+                <span class="grouped-text">${person.name}</span>
+                <div class="pull-label">Pull me</div>
+            </li>
+        </ul>
+
+        <div if.bind="canSeeDebt">
+            <hr>
+
+            <ul class="debt-list">
+                <li repeat.for="debt of data.debtItems">
+                    ${debt.debtor.name} owes ${debt.creditor.name} <span class="underline highlight">${debt.amount}</span>
+                    <button click.delegate="$parent.remove($index, debt)" class="inline-button">x</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</template>
