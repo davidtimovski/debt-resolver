@@ -19,7 +19,7 @@ export class ResolvedDebt {
     }
 
     startOverKeepPersons() {
-        this.data.resetExceptPersons();
+        this.data.reset(true);
         this.router.navigateToRoute('add-debt');
     }
 

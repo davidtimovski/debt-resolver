@@ -74,19 +74,14 @@ export class Data {
         this.persons.splice(index, 1);
     }
 
-    resetExceptPersons() {
-        for (let person of this.persons) {
-            person.owes = 0;
+    reset(excludeUsers) {
+        if (excludeUsers) {
+            for (let person of this.persons) {
+                person.owes = 0;
+            }
+        } else {
+            this.persons = [];
         }
-        this.debtItems = [];
-        this.transactions = [];
-        this.currentPerson = new Person('');
-        this.currentDebt = new Debt(new Person(''), new Person(''), null);
-        this.reduction = 0;
-    }
-
-    reset() {
-        this.persons = [];
         this.debtItems = [];
         this.transactions = [];
         this.currentPerson = new Person('');
