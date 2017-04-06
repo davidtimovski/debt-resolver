@@ -58,6 +58,7 @@ export class AddPersons {
             this.data.currentPerson = new Person('');
             this.editing = false;
             this.nameInput.focus();
+            this.formError = false;
             return;
         }
 
