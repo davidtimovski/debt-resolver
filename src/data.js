@@ -74,8 +74,8 @@ export class Data {
         this.persons.splice(index, 1);
     }
 
-    reset(excludeUsers) {
-        if (excludeUsers) {
+    reset(excludePersons) {
+        if (excludePersons) {
             for (let person of this.persons) {
                 person.owes = 0;
             }
