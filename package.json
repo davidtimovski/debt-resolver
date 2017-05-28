@@ -1,6 +1,6 @@
 {
   "name": "debt-resolver",
-  "description": "A SPA application for resolving debt.",
+  "description": "An application for resolving debt.",
   "version": "0.1.0",
   "repository": {
     "type": "???",
@@ -53,5 +53,8 @@
     "through2": "^2.0.1",
     "uglify-js": "^2.6.3",
     "vinyl-fs": "^2.4.3"
+  },
+  "scripts": {
+    "au-update": "npm install aurelia-animator-css aurelia-bootstrapper bluebird jquery-ui-dist jquery-ui-touch-punch requirejs text aurelia-cli aurelia-testing aurelia-tools babel-eslint babel-plugin-syntax-flow babel-plugin-transform-decorators-legacy babel-plugin-transform-es2015-modules-amd babel-plugin-transform-es2015-modules-commonjs babel-plugin-transform-flow-strip-types babel-polyfill babel-preset-es2015 babel-preset-stage-1 babel-register browser-sync connect-history-api-fallback gulp gulp-babel gulp-changed-in-place gulp-eslint gulp-htmlmin gulp-notify gulp-plumber gulp-rename gulp-sass gulp-sourcemaps html-minifier jasmine-core karma karma-babel-preprocessor karma-chrome-launcher karma-jasmine minimatch through2 uglify-js vinyl-fs"
   }
 }
