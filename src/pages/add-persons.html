@@ -8,7 +8,7 @@
             <a route-href="route: add-debt" if.bind="canAddDebt" class="button dark">${addDebtLabel}</a>
 
             <div class="person-input-group">
-                <input type="text" value.bind="data.currentPerson.name" ref="nameInput" />
+                <input type="text" value.bind="data.currentPerson.name" class="person-input" ref="nameInput" />
                 <button click.delegate="cancel()" if.bind="canCancel" class="cancel-button">Cancel</button>
             </div>
         </form>
