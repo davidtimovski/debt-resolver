@@ -1,7 +1,7 @@
 @media only screen and ( min-device-width: 1240px ) {
     $font-size: 24px;
     $line-height: 28px;
-    $paragraph-font-size: 18px;
+    $paragraph-font-size: 22px;
 
     body {
         font-size: $font-size;
@@ -16,8 +16,8 @@
         width: 34%;
     }
 
-    h1 {
-        font-size: $font-size + 18;
+    header {
+        font-size: $font-size + 20;
     }
 
     p {
@@ -54,12 +54,12 @@
             font-size: $font-size;
 
             &.person-input {
-                padding: 12px 136px 9px 14px;
+                padding: 12px 118px 9px 14px;
             }
         }
 
         .person-input-group .cancel-button {
-            padding: 13px 14px 11px;
+            padding: 13px 20px 11px;
             font-size: $font-size;
         }
     }

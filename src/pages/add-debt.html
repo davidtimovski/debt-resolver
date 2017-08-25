@@ -1,7 +1,5 @@
 <template>
-    <div class="hide" ref="view">
-        <h1>Add Debt</h1>
-        
+    <div class="box hide" ref="view">
         <a route-href="route: add-persons" class="button">Back to Add Persons</a>
         <div if.bind="canResolveDebt">
             <button click.trigger="resolveDebt()" class="button dark">Resolve Debt</button>

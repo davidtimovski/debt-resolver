@@ -1,8 +1,8 @@
 <template>
     <require from="../resources/value-converters/to-integer"></require>
 
-    <div class="hide" ref="view">
-        <form>
+    <div class="box hide" ref="view">
+        <form class="${formErrorClass}">
             <input type="number" value.bind="data.currentDebt.amount | toInteger" ref="amountInput" placeholder="${data.currentDebt.debtor.name} owes ${data.currentDebt.creditor.name}" />
             
             <button click.trigger="save()" class="button dark">Save</button>

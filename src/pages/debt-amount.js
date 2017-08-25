@@ -1,5 +1,6 @@
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
+import {computedFrom} from 'aurelia-framework';
 import {Data} from '../data';
 import {Debt} from '../models/debt';
 import {Person} from '../models/person';
@@ -30,16 +31,17 @@ export class DebtAmount {
 
     save() {
         if (!this.data.currentDebt.amount) {
-            this.amountInput.focus();
+            this.invalidInput();
             return;
         }
-        if (this.data.currentDebt.amount === 0) {
-            this.amountInput.focus();
+        if (this.data.currentDebt.amount <= 0) {
+            this.invalidInput();
             return;
         }
 
         this.data.debtItems.push(this.data.currentDebt);
         this.router.navigateToRoute('add-debt');
+        this.formError = false;
     }
 
     cancel() {
@@ -49,6 +51,17 @@ export class DebtAmount {
 
     redirect() {
         return this.data.persons.length < 2;
+    }
+
+    invalidInput() {
+        this.formError = true;
+        this.amountInput.focus();
+        $(this.view).velocity('callout.shake');
+    }
+
+    @computedFrom('formError')
+    get formErrorClass() {
+        return this.formError ? 'error' : '';
     }
     
 }

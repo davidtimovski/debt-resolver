@@ -1,7 +1,5 @@
 <template>
-    <div class="hide" ref="view">
-        <h1>Resolved</h1>
-
+    <div class="box hide" ref="view">
         <ol class="transactions-list" if.bind="data.transactions.length > 0">
             <li repeat.for="debt of data.transactions">
                 ${debt.debtor.name} &rightarrow; <span class="highlight">${debt.amount}</span> &rightarrow; ${debt.creditor.name}

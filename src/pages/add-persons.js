@@ -43,15 +43,14 @@ export class AddPersons {
 
     save() {
         if (!this.data.currentPerson.name.trim()) {
-            this.formError = true;
-            this.nameInput.focus();
+            this.invalidInput();
             return;
         }
 
         let editedPerson = this.data.persons.find(person => person.hasTheSameNameAs(this.data.currentPerson));
         if (editedPerson) {
             if (!this.data.currentPerson.isTheSameAs(editedPerson)) {
-                this.formError = true;
+                this.invalidInput();
                 return;
             }
             editedPerson.beingEdited = false;
@@ -85,6 +84,12 @@ export class AddPersons {
         this.editing = false;
         this.nameInput.focus();
         this.formError = false;
+    }
+
+    invalidInput() {
+        this.formError = true;
+        this.nameInput.focus();
+        $(this.view).velocity('callout.shake');
     }
 
     @computedFrom('editing')

@@ -95,6 +95,7 @@
           "node_modules/jquery-ui-dist/jquery-ui.min.js",
           "node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js",
           "node_modules/velocity-animate/velocity.min.js",
+          "node_modules/velocity-animate/velocity.ui.min.js",
           "node_modules/requirejs/require.js"
         ],
         "dependencies": [

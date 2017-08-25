@@ -1,7 +1,5 @@
 <template>
-    <div class="hide" ref="view">
-        <h1>Debt Resolver</h1>
-
+    <div class="box hide" ref="view">
         <a route-href="route: add-persons" class="button ${!canStartOver || 'dark'}">${startButtonLabel}</a>
         <button click.trigger="startOver()" if.bind="canStartOver" class="button">Start over</button>
         <a route-href="route: about" class="button">About</a>

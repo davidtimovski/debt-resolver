@@ -1,20 +1,32 @@
-$primary-text-color: #545454;
+$primary-color: #1b9dff;
+$primary-color-intense: #135bfb;
+$dark-color: #475270;
 $light-text-color: #848484;
-$orange-color: #f04242;
 $blue-color: #c2ebef;
 $transparent-blue-color: rgba(194, 235, 239, 0.5);
-$font-size: 44px;
-$line-height: 58px;
+$font-size: 48px;
+$line-height: 62px;
 $paragraph-font-size: 28px;
 $border-color: #999;
 
-
+html, body {
+    height: 100%;
+}
 body {
     background: url('../images/background-tile.jpg') repeat;
-    font-family: 'Merienda One', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: $font-size;
     line-height: $line-height;
-    color: $primary-text-color;
+    color: $dark-color;
+}
+
+header {
+    background: $primary-color;
+    padding: 100px 0 170px;
+    box-shadow: 0 3px 10px #bbb;
+    font-size: $font-size + 22;
+    text-align: center;
+    color: #fff;
 }
 
 .column {
@@ -25,14 +37,14 @@ body {
 .container {
     display: inline-block;
     width: 90%;
-    margin: 70px 0;
 }
 
-h1 {
-    padding: 20px 0 60px;
-    font-size: 64px;
-    text-align: center;
-    text-transform: uppercase;
+.box {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 25px;
+    margin: -83px 0 100px;
+    box-shadow: 0 3px 15px #bbb;
 }
 
 p {
@@ -55,16 +67,16 @@ hr {
 }
 
 .highlight {
-    color: $orange-color;
+    color: $primary-color;
 }
 
 .button {
     display: block;
     width: 100%;
-    background: $orange-color;
+    background: $primary-color;
     border: none;
     outline: none;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 20px 0 18px;
     margin-bottom: 25px;
     font-family: inherit;
@@ -75,19 +87,22 @@ hr {
     cursor: pointer;
     transition: background 100ms ease-in-out;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
     &:active {
-        background: #e03232;
+        background: $primary-color-intense;
     }
 
     &.dark {
-        background: $primary-text-color;
+        background: $dark-color;
     
         &:active {
-            background: #444;
+            background: #374260;
         }
     }
 }
@@ -96,7 +111,7 @@ a.button {
 }
 
 .inline-button {
-    background: $orange-color;
+    background: $primary-color;
     border: none;
     border-radius: 38px;
     outline: none;
@@ -110,13 +125,13 @@ a.button {
     transition: background 100ms ease-in-out;
 
     &:active {
-        background: #e03232;
+        background: $primary-color-intense;
     }
 }
 
 .content {
     background: $transparent-blue-color;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 30px;
     margin-bottom: 25px;
 }
@@ -129,7 +144,7 @@ form {
         box-sizing: border-box;
         border: 2px solid $border-color;
         outline: none;
-        border-radius: 15px;
+        border-radius: 10px;
         padding: 18px 20px 15px;
         margin-bottom: 25px;
         font-family: inherit;
@@ -155,18 +170,25 @@ form {
             right: 0;
             background: none;
             border: none;
+            border-radius: 10px;
             outline: none;
             padding: 19px 20px 17px;
             font-family: inherit;
             font-size: $font-size;
             color: inherit;
             cursor: pointer;
+            transition: background 200ms ease-in-out, color 100ms ease-in-out;
+
+            &:hover {
+                background: $dark-color;
+                color: #fff;
+            }
         }
     }
 }
 form.error {
     input {
-        background: #ffdddd;
+        background: #f6dfe9;
     }
 }
 
@@ -174,7 +196,7 @@ form.error {
     padding: 25px 0 25px 65px;
     list-style-type: decimal;
     background: $transparent-blue-color;
-    border-radius: 15px;
+    border-radius: 10px;
 
     li {
         line-height: $line-height + 12;
@@ -186,16 +208,19 @@ ul {
 
     li {
         margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
 .persons-list {
-    margin-bottom: 15px;
 
     li {
         position: relative;
         background: $blue-color;
-        border-radius: 15px;
+        border-radius: 10px;
         padding: 21px 20px 19px;
         font-size: $font-size;
         cursor: pointer;
@@ -276,7 +301,7 @@ ul {
         margin-top: 15px;
         list-style-type: disc;
         background: $transparent-blue-color;
-        border-radius: 15px;
+        border-radius: 10px;
     
         li {
             margin-bottom: 0;
