@@ -62,11 +62,13 @@ hr {
     opacity: 0;
 }
 
-.underline {
-    text-decoration: underline;
-}
-
 .highlight {
+    display: inline-block;
+    background: url('../images/background-tile.jpg') repeat;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 0 7px;
+    margin-left: 4px;
     color: $primary-color;
 }
 
@@ -199,20 +201,23 @@ form.error {
     border-radius: 10px;
 
     li {
+        margin-bottom: 5px;
         line-height: $line-height + 12;
+    }
+}
+
+ul, ol {
+    li {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
     }
 }
 
 ul {
     list-style-type: none;
-
-    li {
-        margin-bottom: 15px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
 }
 
 .persons-list {
@@ -304,7 +309,7 @@ ul {
         border-radius: 10px;
     
         li {
-            margin-bottom: 0;
+            margin-bottom: 5px;
             line-height: $line-height + 12;
         }
     }

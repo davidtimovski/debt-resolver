@@ -19,7 +19,7 @@
 
             <ul class="debt-list">
                 <li repeat.for="debt of data.debtItems">
-                    ${debt.debtor.name} owes ${debt.creditor.name} <span class="underline highlight">${debt.amount}</span>
+                    ${debt.debtor.name} owes ${debt.creditor.name} <span class="highlight">${debt.amount}</span>
                     <button click.delegate="$parent.remove($index, debt)" class="inline-button">x</button>
                 </li>
             </ul>
