@@ -1,4 +1,6 @@
 <template>
+    <require from="../resources/value-converters/to-formatted-number"></require>
+
     <div class="box hide" ref="view">
         <a route-href="route: add-persons" class="button">Back to Add Persons</a>
         <div if.bind="canResolveDebt">
@@ -19,7 +21,7 @@
 
             <ul class="debt-list">
                 <li repeat.for="debt of data.debtItems">
-                    ${debt.debtor.name} owes ${debt.creditor.name} <span class="highlight">${debt.amount}</span>
+                    ${debt.debtor.name} owes ${debt.creditor.name} <span class="highlight">${debt.amount | toFormattedNumber}</span>
                     <button click.delegate="$parent.remove($index, debt)" class="inline-button">x</button>
                 </li>
             </ul>

@@ -1,8 +1,10 @@
 <template>
+    <require from="../resources/value-converters/to-formatted-number"></require>
+
     <div class="box hide" ref="view">
         <ol class="transactions-list" if.bind="data.transactions.length > 0">
             <li repeat.for="debt of data.transactions">
-                ${debt.debtor.name} &rightarrow; <span class="highlight">${debt.amount}</span> &rightarrow; ${debt.creditor.name}
+                ${debt.debtor.name} &rightarrow; <span class="highlight">${debt.amount | toFormattedNumber}</span> &rightarrow; ${debt.creditor.name}
             </li>
         </ol>
         
@@ -20,7 +22,7 @@
 
         <ul class="debt-list resolved">
             <li repeat.for="debt of data.debtItems">
-                ${debt.debtor.name} owes ${debt.creditor.name} <span class="highlight">${debt.amount}</span>
+                ${debt.debtor.name} owes ${debt.creditor.name} <span class="highlight">${debt.amount | toFormattedNumber}</span>
             </li>
         </ul>
 
