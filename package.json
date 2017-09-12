@@ -20,7 +20,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "aurelia-cli": "^0.24.0",
+    "aurelia-cli": "^0.31.3",
     "aurelia-testing": "^1.0.0-beta.2.0.0",
     "aurelia-tools": "^0.2.2",
     "babel-eslint": "^6.0.4",
@@ -45,7 +45,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "html-minifier": "^3.5.3",
+    "html-minifier": "^3.5.5",
     "jasmine-core": "^2.8.0",
     "karma": "^0.13.22",
     "karma-babel-preprocessor": "^6.0.1",
