@@ -22,9 +22,9 @@ body {
 
 header {
     background: $primary-color;
-    padding: 100px 0 170px;
+    padding: 120px 0 210px;
     box-shadow: 0 3px 10px #bbb;
-    font-size: $font-size + 22;
+    font-size: $font-size + 24;
     text-align: center;
     color: #fff;
 }
@@ -43,7 +43,7 @@ header {
     background: #f8f8f8;
     border-radius: 10px;
     padding: 25px;
-    margin: -83px 0 100px;
+    margin: -132px 0 100px;
     box-shadow: 0 3px 15px #bbb;
 }
 
@@ -79,7 +79,7 @@ hr {
     border: none;
     outline: none;
     border-radius: 10px;
-    padding: 20px 0 18px;
+    padding: 25px 0 21px;
     margin-bottom: 25px;
     font-family: inherit;
     font-size: $font-size;
@@ -109,7 +109,7 @@ hr {
     }
 }
 a.button {
-    padding: 18px 0 16px;
+    padding: 18px 0 14px;
 }
 
 .inline-button {
@@ -117,7 +117,7 @@ a.button {
     border: none;
     border-radius: 38px;
     outline: none;
-    padding: 12px 24px;
+    padding: 14px 22px;
     margin-left: 15px;
     vertical-align: top;
     font-family: inherit;
@@ -147,7 +147,7 @@ form {
         border: 2px solid $border-color;
         outline: none;
         border-radius: 10px;
-        padding: 18px 20px 15px;
+        padding: 22px 20px 19px;
         margin-bottom: 25px;
         font-family: inherit;
         font-size: $font-size;
@@ -155,7 +155,7 @@ form {
         transition: background 200ms ease-in-out;
 
         &.person-input {
-            padding: 18px 136px 15px 20px;
+            padding: 22px 136px 19px 20px;
         }
     }
 
@@ -174,7 +174,7 @@ form {
             border: none;
             border-radius: 10px;
             outline: none;
-            padding: 19px 20px 17px;
+            padding: 24px 20px 20px;
             font-family: inherit;
             font-size: $font-size;
             color: inherit;
@@ -226,7 +226,7 @@ ul {
         position: relative;
         background: $blue-color;
         border-radius: 10px;
-        padding: 21px 20px 19px;
+        padding: 22px 20px 18px;
         font-size: $font-size;
         cursor: pointer;
 
@@ -243,7 +243,7 @@ ul {
             background: none;
             border: none;
             outline: none;
-            padding: 16px 20px 14px;
+            padding: 17px 20px 13px;
             font-family: inherit;
             font-size: inherit;
             color: $light-text-color;

@@ -8,6 +8,11 @@
         line-height: $line-height;
     }
 
+    header {
+        padding: 100px 0 170px;
+        font-size: $font-size + 24;
+    }
+
     .column {
         width: 20%;
     }
@@ -16,12 +21,12 @@
         width: 60%;
     }
 
-    header {
-        font-size: $font-size + 22;
+    .box {
+        margin: -93px 0 100px;
     }
 
     p {
-        font-size: $paragraph-font-size;
+        font-size: $paragraph-font-size + 4;
         line-height: $line-height;
     }
 
@@ -30,16 +35,16 @@
     }
 
     .button {
-        padding: 10px 0 8px;
+        padding: 16px 0 12px;
         margin-bottom: 20px;
         font-size: $font-size;
     }
     a.button {
-        padding: 12px 0 10px;
+        padding: 14px 0 10px;
     }
 
     .inline-button {
-        padding: 4px 12px;
+        padding: 8px 13px;
         margin-left: 12px;
         font-size: $font-size - 10;
     }
@@ -50,16 +55,16 @@
 
     form {
         input {
-            padding: 12px 14px 9px;
+            padding: 13px 14px 10px;
             font-size: $font-size;
 
             &.person-input {
-                padding: 12px 136px 9px 14px;
+                padding: 13px 136px 10px 14px;
             }
         }
 
         .person-input-group .cancel-button {
-            padding: 13px 20px 11px;
+            padding: 15px 20px 11px;
             font-size: $font-size;
         }
     }
@@ -73,7 +78,7 @@
     }
 
     .persons-list li {
-        padding: 15px 14px 13px;
+        padding: 16px 14px 12px;
         font-size: $font-size;
 
         .remove-button {
@@ -81,7 +86,7 @@
         }
 
         .pull-label {
-            padding: 18px 14px 14px;
+            padding: 19px 14px 13px;
             line-height: $line-height - 4;
         }
     }
