@@ -38,8 +38,8 @@ export class AddDebt {
 
         $('.droppable').droppable({
             drop: (event, ui) => {
-                let debtor = ui.draggable.attr('data-person');
-                let creditor = $(this).attr('data-person');
+                let debtor = ui.draggable[0].dataset.person;
+                let creditor = event.target.dataset.person;
 
                 goToAddDebt(debtor, creditor);
             }
