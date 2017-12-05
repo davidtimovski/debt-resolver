@@ -53,8 +53,8 @@ export class Data {
     }
 
     addDebt(debtorName, creditorName, amount) {
-        let debtor = this.persons.find(function (person) { return person.name === debtorName; });
-        let creditor = this.persons.find(function (person) { return person.name === creditorName; });
+        let debtor = this.persons.find(person => { return person.name === debtorName; });
+        let creditor = this.persons.find(person => { return person.name === creditorName; });
         this.currentDebt = new Debt(debtor, creditor, null);
     }
 
