@@ -4,7 +4,7 @@ Take debt and minimize the number of necessary transactions to resolve it.
 
 ## Demo
 
-You can see it in action [here](http://debtresolver.davidtimovski.com/).
+You can see it in action [here](https://debtresolver.davidtimovski.com/).
 
 ## License
 
