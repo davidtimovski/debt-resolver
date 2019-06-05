@@ -11,14 +11,14 @@ $border-color: #999;
 
 @font-face {
     font-family: 'Josefin Sans SemiBold';
-    src: url('../../assets/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+    src: url('src/assets/fonts/JosefinSans-SemiBold.ttf') format('truetype');
 }
 
 html, body {
     height: 100%;
 }
 body {
-    background: url('../images/background-tile.jpg') repeat;
+    background: url('src/assets/images/background-tile.jpg') repeat;
     font-family: 'Josefin Sans SemiBold', sans-serif;
     font-size: $font-size;
     line-height: $line-height;

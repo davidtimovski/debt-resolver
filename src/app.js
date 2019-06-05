@@ -1,9 +1,5 @@
 export class App {
 
-  constructor() {
-    
-  }
-
   configureRouter(config, router) {
     config.title = 'Debt Resolver';
     config.options.pushState = true;

@@ -52,13 +52,13 @@ export class Data {
         this.reduction = Math.floor(100 - this.transactions.length / this.debtItems.length * 100);
     }
 
-    addDebt(debtorName, creditorName, amount) {
+    addDebt(debtorName, creditorName) {
         let debtor = this.persons.find(person => { return person.name === debtorName; });
         let creditor = this.persons.find(person => { return person.name === creditorName; });
         this.currentDebt = new Debt(debtor, creditor, null);
     }
 
-    addCurrentPerson(person) {
+    addCurrentPerson() {
         let name = this.currentPerson.name.trim();
         this.currentPerson.name = name.charAt(0).toUpperCase() + name.slice(1);
         this.persons.push(this.currentPerson);

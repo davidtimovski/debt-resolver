@@ -1,20 +1,14 @@
+// regenerator-runtime is to support async/await syntax in ESNext.
+// If you don't use async/await, you can remove regenerator-runtime.
+import 'regenerator-runtime/runtime';
 import environment from './environment';
-
-//Configure Bluebird Promises.
-Promise.config({
-  warnings: {
-    wForgottenReturn: false
-  }
-});
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .feature('resources');
 
-  if (environment.debug) {
-    aurelia.use.developmentLogging();
-  }
+  aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 
   if (environment.testing) {
     aurelia.use.plugin('aurelia-testing');
