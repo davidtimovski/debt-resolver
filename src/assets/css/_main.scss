@@ -10,312 +10,313 @@ $paragraph-font-size: 28px;
 $border-color: #999;
 
 @font-face {
-    font-family: 'Josefin Sans SemiBold';
-    src: url('src/assets/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+  font-family: "Josefin Sans SemiBold";
+  src: url("src/assets/fonts/JosefinSans-SemiBold.ttf") format("truetype");
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 body {
-    background: url('src/assets/images/background-tile.jpg') repeat;
-    font-family: 'Josefin Sans SemiBold', sans-serif;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $dark-color;
+  background: url("src/assets/images/background-tile.jpg") repeat;
+  font-family: "Josefin Sans SemiBold", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $dark-color;
 }
 
 header {
-    background: $primary-color;
-    padding: 120px 0 210px;
-    box-shadow: 0 3px 10px #bbb;
-    font-size: $font-size + 24;
-    text-align: center;
-    color: #fff;
+  background: $primary-color;
+  padding: 120px 0 210px;
+  box-shadow: 0 3px 10px #bbb;
+  font-size: $font-size + 24;
+  text-align: center;
+  color: #fff;
 }
 
 .column {
-    display: inline-block;
-    width: 5%;
+  display: inline-block;
+  width: 5%;
 }
 
 .container {
-    display: inline-block;
-    width: 90%;
+  display: inline-block;
+  width: 90%;
 }
 
 .box {
-    background: #f8f8f8;
-    border-radius: 10px;
-    padding: 25px;
-    margin: -132px 0 100px;
-    box-shadow: 0 3px 15px #bbb;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 25px;
+  margin: -132px 0 100px;
+  box-shadow: 0 3px 15px #bbb;
 }
 
 p {
-    font-size: $paragraph-font-size;
-    line-height: $line-height;
+  font-size: $paragraph-font-size;
+  line-height: $line-height;
 }
 
 hr {
-    height: 1px;
-    background-color: $border-color;
-    margin: 25px 5px;
+  height: 1px;
+  background-color: $border-color;
+  margin: 25px 5px;
 }
 
 .hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .highlight {
-    display: inline-block;
-    background: url('../images/background-tile.jpg') repeat;
-    border: 1px solid $border-color;
-    border-radius: 8px;
-    padding: 0 7px;
-    margin-left: 4px;
-    color: $primary-color;
+  display: inline-block;
+  background: url("src/assets/images/background-tile.jpg") repeat;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 0 7px;
+  margin-left: 4px;
+  color: $primary-color;
 }
 
 .button {
-    display: block;
-    width: 100%;
-    background: $primary-color;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    padding: 25px 0 21px;
-    margin-bottom: 25px;
-    font-family: inherit;
-    font-size: $font-size;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    transition: background 100ms ease-in-out;
+  display: block;
+  width: 100%;
+  background: $primary-color;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 25px 0 21px;
+  margin-bottom: 25px;
+  font-family: inherit;
+  font-size: $font-size;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 100ms ease-in-out;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-    &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &:active {
+    background: $primary-color-intense;
+  }
+
+  &.dark {
+    background: $dark-color;
+
     &:active {
-        background: $primary-color-intense;
+      background: #374260;
     }
-
-    &.dark {
-        background: $dark-color;
-    
-        &:active {
-            background: #374260;
-        }
-    }
+  }
 }
 a.button {
-    padding: 18px 0 14px;
+  padding: 18px 0 14px;
 }
 
 .inline-button {
-    background: $primary-color;
-    border: none;
-    border-radius: 38px;
-    outline: none;
-    padding: 14px 22px;
-    margin-left: 15px;
-    vertical-align: top;
-    font-family: inherit;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    transition: background 100ms ease-in-out;
+  background: $primary-color;
+  border: none;
+  border-radius: 38px;
+  outline: none;
+  padding: 14px 22px;
+  margin-left: 15px;
+  vertical-align: top;
+  font-family: inherit;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 100ms ease-in-out;
 
-    &:active {
-        background: $primary-color-intense;
-    }
+  &:active {
+    background: $primary-color-intense;
+  }
 }
 
 .content {
-    background: $transparent-blue-color;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 25px;
+  background: $transparent-blue-color;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
 }
 
 form {
-    font-size: 0;
+  font-size: 0;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid $border-color;
+    outline: none;
+    border-radius: 10px;
+    padding: 22px 20px 19px;
+    margin-bottom: 25px;
+    font-family: inherit;
+    font-size: $font-size;
+    color: inherit;
+    transition: background 200ms ease-in-out;
+
+    &.person-input {
+      padding: 22px 136px 19px 20px;
+    }
+  }
+
+  .person-input-group {
+    position: relative;
 
     input {
-        width: 100%;
-        box-sizing: border-box;
-        border: 2px solid $border-color;
-        outline: none;
-        border-radius: 10px;
-        padding: 22px 20px 19px;
-        margin-bottom: 25px;
-        font-family: inherit;
-        font-size: $font-size;
-        color: inherit;
-        transition: background 200ms ease-in-out;
-
-        &.person-input {
-            padding: 22px 136px 19px 20px;
-        }
+      margin-bottom: 0;
     }
 
-    .person-input-group {
-        position: relative;
+    .cancel-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      padding: 24px 20px 20px;
+      font-family: inherit;
+      font-size: $font-size;
+      color: inherit;
+      cursor: pointer;
+      transition: background 200ms ease-in-out, color 100ms ease-in-out;
 
-        input {
-            margin-bottom: 0;
-        }
-
-        .cancel-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: none;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            padding: 24px 20px 20px;
-            font-family: inherit;
-            font-size: $font-size;
-            color: inherit;
-            cursor: pointer;
-            transition: background 200ms ease-in-out, color 100ms ease-in-out;
-
-            &:hover {
-                background: $dark-color;
-                color: #fff;
-            }
-        }
+      &:hover {
+        background: $dark-color;
+        color: #fff;
+      }
     }
+  }
 }
 form.error {
-    input {
-        background: #f6dfe9;
-    }
+  input {
+    background: #f6dfe9;
+  }
 }
 
 .transactions-list {
+  padding: 25px 0 25px 65px;
+  list-style-type: decimal;
+  background: $transparent-blue-color;
+  border-radius: 10px;
+
+  li {
+    margin-bottom: 5px;
+    line-height: $line-height + 12;
+  }
+}
+
+ul,
+ol {
+  li {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.persons-list {
+  li {
+    position: relative;
+    background: $blue-color;
+    border-radius: 10px;
+    padding: 22px 20px 18px;
+    font-size: $font-size;
+    cursor: pointer;
+
+    .grouped-text {
+      display: inline-block;
+      padding-right: 150px;
+    }
+
+    .remove-button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 17px 20px 13px;
+      font-family: inherit;
+      font-size: inherit;
+      color: $light-text-color;
+      cursor: pointer;
+    }
+
+    .pull-label {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 24px 20px 20px;
+      font-family: inherit;
+      font-size: inherit;
+      color: $light-text-color;
+    }
+
+    &.active {
+      background: #a2cbcf;
+      color: #fff;
+      transition: background 100ms ease-in-out, color 100ms ease-in-out;
+
+      .remove-button {
+        color: #fff;
+      }
+    }
+
+    &.ui-draggable-dragging {
+      background: rgba(162, 203, 207, 0.5);
+
+      .pull-label {
+        display: none;
+      }
+    }
+
+    &.ui-droppable-active {
+      background: rgba(192, 235, 239, 0.5);
+      text-align: right;
+
+      .grouped-text {
+        padding-right: 0;
+      }
+
+      .pull-label {
+        display: none;
+      }
+    }
+  }
+}
+
+.debt-list {
+  margin-top: 25px;
+  font-size: $font-size;
+
+  &.resolved {
     padding: 25px 0 25px 65px;
-    list-style-type: decimal;
+    margin-top: 15px;
+    list-style-type: disc;
     background: $transparent-blue-color;
     border-radius: 10px;
 
     li {
-        margin-bottom: 5px;
-        line-height: $line-height + 12;
+      margin-bottom: 5px;
+      line-height: $line-height + 12;
     }
-}
-
-ul, ol {
-    li {
-        margin-bottom: 15px;
-
-        &:last-child {
-            margin-bottom: 0 !important;
-        }
-    }
-}
-
-ul {
-    list-style-type: none;
-}
-
-.persons-list {
-
-    li {
-        position: relative;
-        background: $blue-color;
-        border-radius: 10px;
-        padding: 22px 20px 18px;
-        font-size: $font-size;
-        cursor: pointer;
-
-        .grouped-text {
-            display: inline-block;
-            padding-right: 150px;
-        }
-
-        .remove-button {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            background: none;
-            border: none;
-            outline: none;
-            padding: 17px 20px 13px;
-            font-family: inherit;
-            font-size: inherit;
-            color: $light-text-color;
-            cursor: pointer;
-        }
-
-        .pull-label {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            background: none;
-            border: none;
-            outline: none;
-            padding: 24px 20px 20px;
-            font-family: inherit;
-            font-size: inherit;
-            color: $light-text-color;
-        }
-
-        &.active {
-            background: #a2cbcf;
-            color: #fff;
-            transition: background 100ms ease-in-out, color 100ms ease-in-out;
-    
-            .remove-button {
-                color: #fff;
-            }
-        }
-
-        &.ui-draggable-dragging {
-            background: rgba(162, 203, 207, 0.5);
-    
-            .pull-label {
-                display: none;
-            }
-        }
-
-        &.ui-droppable-active {
-            background: rgba(192, 235, 239, 0.5);
-            text-align: right;
-    
-            .grouped-text {
-                padding-right: 0;
-            }
-    
-            .pull-label {
-                display: none;
-            }
-        }
-    }
-}
-
-.debt-list {
-    margin-top: 25px;
-    font-size: $font-size;
-
-    &.resolved {
-        padding: 25px 0 25px 65px;
-        margin-top: 15px;
-        list-style-type: disc;
-        background: $transparent-blue-color;
-        border-radius: 10px;
-    
-        li {
-            margin-bottom: 5px;
-            line-height: $line-height + 12;
-        }
-    }
+  }
 }
